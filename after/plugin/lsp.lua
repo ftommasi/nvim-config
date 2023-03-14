@@ -2,11 +2,7 @@ local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
 lsp.ensure_installed({
-	'tssrver',
-	'eslint',
-	'sumneko_lua',
 	'rust_analyzer',
-	"clangd",
 })
 
 local cmp = require('cmp')
@@ -41,3 +37,13 @@ lsp.on_attach(function(client,bufnr)
 end)
 
 lsp.setup()
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})
+
