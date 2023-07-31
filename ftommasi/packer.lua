@@ -19,11 +19,20 @@ return require('packer').startup(function(use)
 			vim.cmd('colorscheme rose-pine')
 		end
 	})
-	use('nvim-treesitter/nvim-treesitter',{ run = ':TSUpdate'})
-	use('nvim-treesitter/playground')
+    --	tree sitter works great on linux. On windows not so much
+--	use('nvim-treesitter/nvim-treesitter',{ run = ':TSUpdate'})
+--	use('nvim-treesitter/playground')
 	use('ThePrimeagen/harpoon')
 	use('mbbill/undotree')
-	use('tpope/vim-fugitive')
+	use('tpope/vim-fugitive') 
+
+    --So for now on windows we will use coc(k)
+    use { 'neoclide/coc.nvim', branch='release' }
+    use 'lervag/vimtex'
+
+    --[[ On new systems install COC packages via
+        CocInstall coc-vimtex coc-texlab
+    --]]
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',

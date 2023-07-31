@@ -1,0 +1,10 @@
+{
+  "languageserver": {
+    "odin": {
+      "command": "ols",
+      "filetypes": ["odin"],
+      "rootPatterns": ["ols.json"]
+    }
+  },
+  "zig.zls.path": "C:\\Users\\fgtom\\AppData\\Local\\coc\\extensions\\coc-zls-data\\zls_install\\zls.exe"
+}
